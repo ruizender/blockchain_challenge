@@ -1,0 +1,9 @@
+<% @blockchain.errors.full_messages.each do |message| %>
+  <h2><%= message %></h2>
+<% end %> 
+<h2 id="notice"><%= notice %></h2>
+
+<%= render 'blockchains/partials/form' %>
+<div id="blockchain-table">  
+  <%= render 'blockchains/partials/table' %>
+</div>
