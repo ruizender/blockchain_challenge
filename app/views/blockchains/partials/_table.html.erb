@@ -2,6 +2,7 @@
 <% @blockchains.each do |blockchain| %>
   <%= render 'blockchains/partials/table_line', blockchain: blockchain %>
 <% end  %>
+<div><%=raw pagy_nav(@pagy) %></div>
 
 
 

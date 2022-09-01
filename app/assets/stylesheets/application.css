@@ -77,3 +77,26 @@ details > p {
   margin: 0;
   box-shadow: 3px 3px 4px black;
 }
+
+
+
+  .b-pagy {
+    color: green !important;
+    background-color: yellow !important;
+    
+  }
+
+  .page{ 
+    margin-top: 40px;
+    background-color: grey;
+    border: none;
+    color: white;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+  }
+
+
