@@ -1,0 +1,11 @@
+
+<%= form_for @blockchain, url: blockchains_path, method: :post do |form| %>
+  <div class="pure-g py-20">
+    <div class="pure-u-4-5">
+      <%= form.text_field :hash_name, class:"w-100" %>
+    </div>
+    <div class="pure-u-1-5">
+      <%= form.submit "ADD" %>
+    </div>
+  </div>
+<% end %>

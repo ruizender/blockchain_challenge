@@ -1,0 +1,41 @@
+
+<div id="<%= dom_id blockchain %>">
+  <details>
+    <summary class="w-100">
+      <%= blockchain.hash_name %>
+      <i class="fa-regular fa-circle-down fa-2x"></i>
+      <%= link_to 'DELETE', blockchain_path(blockchain.id), data: { "turbo-method": :delete,  "turbo-confirm": 'Are you sure?'} , class:"pure-button" %>
+      
+    </summary>
+    <table class="pure-table pure-table-horizontal w-100">
+      <tbody>
+        <tr>
+          <th>name:</th>
+          <td><%= blockchain.hash_name %></td>
+        </tr>
+        <tr>
+          <th>prev_block:</th>
+          <td><%= blockchain.prev_block %></td>
+        </tr>
+        <tr>
+          <th>block_index:</th>
+          <td><%= blockchain.block_index %></td>
+        </tr>
+        <tr>
+          <th>time:</th>
+          <td><%= blockchain.time %></td>
+        </tr>
+        <tr>
+          <th>bits:</th>
+          <td><%= blockchain.bits %></td>
+        </tr>
+      </tbody>
+    </table>
+  </details>
+
+</div>
+
+
+
+
+
