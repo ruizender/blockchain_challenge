@@ -19,7 +19,6 @@ class BlockchainsController < ApplicationController
       else
         format.html { render :index, status: :unprocessable_entity }
         @pagy, @blockchains = pagy(Blockchain.all)
-        turbo_stream.update('notice', 'Hash name has already been taken')
       end
     end
   end
