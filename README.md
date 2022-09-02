@@ -1,4 +1,4 @@
-# App Blockchein
+# App Blockchain
 
 Application was uploaded to the Heroku servers, which can be accessed at the following link:  https://blockchainchallenge.herokuapp.com/
 
