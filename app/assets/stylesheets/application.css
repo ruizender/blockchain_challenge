@@ -14,8 +14,6 @@
  *= require_self
  */
 
-
-
 .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -42,6 +40,10 @@
   width: 100%;
 }
 
+.my-4{
+  margin-top: 40px;
+}
+
 .py-20{
   padding-top: 20px;
   padding-bottom: 20px;
@@ -54,7 +56,6 @@
 .button-new{
 }
 
-/* para modificar el details */
 details {
   font: 16px "Open Sans", Calibri, sans-serif;
   width: 620px;
@@ -79,24 +80,20 @@ details > p {
 }
 
 
-
-  .b-pagy {
-    color: green !important;
-    background-color: yellow !important;
-    
-  }
-
   .page{ 
     margin-top: 40px;
-    background-color: grey;
+    background-color: rgb(2, 30, 123);
     border: none;
     color: white;
-    padding: 8px 32px;
+    padding: 4px 16px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     border-radius: 12px;
   }
+
+
+
 
 
