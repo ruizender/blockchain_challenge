@@ -4,8 +4,7 @@ class BlockchainsController < ApplicationController
   
   def index
     @blockchain = Blockchain.new
-    @pagy, @blockchains = pagy(Blockchain.all)
-
+    @pagy, @blockchains = pagy(Blockchain.all.order('created_at DESC'))
   end
   
   def create
@@ -14,11 +13,13 @@ class BlockchainsController < ApplicationController
     respond_to do |format|
       if @blockchain.save
         format.turbo_stream do
-          render turbo_stream: [turbo_stream.prepend('blockchain-table', partial: "blockchains/partials/table_line", locals: { blockchain: @blockchain }), turbo_stream.update('notice', 'successfully created')]
+          render turbo_stream: [turbo_stream.prepend('blockchain-table', partial: "blockchains/partials/table_line", locals: { blockchain: @blockchain }), turbo_stream.update('notice', 'Successfully created')]
         end
       else
         format.html { render :index, status: :unprocessable_entity }
-        @pagy, @blockchains = pagy(Blockchain.all)
+
+        @pagy, @blockchains = pagy(Blockchain.all.order('created_at DESC'))
+
       end
     end
   end
@@ -27,7 +28,7 @@ class BlockchainsController < ApplicationController
     @blockchain.destroy
     respond_to do |format|
       format.turbo_stream do
-        render turbo_stream: [turbo_stream.remove(@blockchain), turbo_stream.update('notice', 'successfully deleted')]
+        render turbo_stream: [turbo_stream.remove(@blockchain), turbo_stream.update('notice', 'Successfully deleted')]
       end
     end
   end

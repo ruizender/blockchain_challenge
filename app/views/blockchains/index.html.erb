@@ -1,7 +1,7 @@
 <% @blockchain.errors.full_messages.each do |message| %>
-  <h2><%= message %></h2>
+  <h2 id="notice"><%= message %></h2>
 <% end %> 
-<h2 id="notice"><%= notice %></h2>
+<h2 id="notice" class="text-sm font-bold px-4 py-3 text-lime-600" role="alert"><%= notice %></h2>
 
 <%= render 'blockchains/partials/form' %>
 <div id="blockchain-table">  
