@@ -1,11 +1,8 @@
 
-<%= form_for @blockchain, url: blockchains_path, method: :post do |form| %>
-  <div class="pure-g py-20">
-    <div class="pure-u-4-5">
-      <%= form.text_field :hash_name, class:"w-100" %>
-    </div>
-    <div class="pure-u-1-5">
-      <%= form.submit "ADD" %>
-    </div>
+<%= form_for @blockchain, url: blockchains_path, method: :post , :html => {class:"w-full max-w-lg"}  do |form|  %>
+  <div class="flex items-center border-b border-teal-500 py-2 my-4">
+    <%= form.text_field :hash_name, required: true, pattern: "[a-zA-Z0-9]+", class:"appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none", placeholder: "Enter hash name" %>
+    <%= form.submit "ADD" , :class => 'bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded' %>
   </div>
 <% end %>
+
